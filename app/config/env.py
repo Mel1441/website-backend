@@ -3,12 +3,12 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 # Load .env file from project root
-env_file = ".env.production" if os.getenv("ENV") == "production" else ".env.development"
+env_file = ".env.prod" if os.getenv("ENV") == "prod" else ".env.dev"
 load_dotenv(dotenv_path=env_file)
 
 class Settings:
-    ENV: str = os.getenv("ENV", "development")
-    DEBUG: bool = ENV == "development"
+    ENV: str = os.getenv("ENV", "dev")
+    DEBUG: bool = ENV == "dev"
 
     # JWT
     SECRET_KEY: str = os.getenv("SECRET_KEY", "insecure-dev-key")
