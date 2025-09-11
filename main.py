@@ -1,8 +1,8 @@
 from fastapi import FastAPI
-from config.cors import add_cors
+from app.config.cors import add_cors
 from routes import include_all_routes
 import os
-from config.env import settings
+from app.config.env import settings
 
 if settings.DEBUG:
     print("Running in development mode")

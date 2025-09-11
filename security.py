@@ -1,4 +1,4 @@
-from config.env import settings
+from app.config.env import settings
 
 SECRET_KEY = settings.SECRET_KEY
 ALGORITHM = settings.ALGORITHM
