@@ -5,6 +5,7 @@ import os
 from app.config.env import settings
 from app.routes.auth import router as auth_router
 
+
 if settings.DEBUG:
     print("Running in development mode")
 

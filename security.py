@@ -7,6 +7,7 @@ from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 from app.db import get_db
 from models.user import User  # your SQLAlchemy User model
+from app.config.env import settings
 
 
 from app.config.env import settings
@@ -20,6 +21,7 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
 
 def get_password_hash(password: str) -> str:
     return pwd_context.hash(password)
+
 
 
 SECRET_KEY = settings.SECRET_KEY
