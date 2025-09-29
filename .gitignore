@@ -6,3 +6,6 @@ rollback/snapshots/
 notes.txt
 .venv
 .env.*
+visit_log.txt
+003_seed_users.sql
+generate_hashes.py
