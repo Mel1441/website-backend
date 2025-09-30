@@ -7,7 +7,7 @@ from security import verify_password, create_access_token
 
 router = APIRouter()
 
-@router.post("/auth/login")
+@router.post("/login")
 def login(
     form_data: OAuth2PasswordRequestForm = Depends(),
     db: Session = Depends(get_db),
