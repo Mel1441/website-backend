@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+
 from app.config.cors import add_cors
 from routes import include_all_routes
 import os
@@ -10,6 +12,9 @@ if settings.DEBUG:
     print("Running in development mode")
 
 app = FastAPI(debug=settings.DEBUG)
+
+app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="static")
+
 
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
