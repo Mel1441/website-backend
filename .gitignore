@@ -9,3 +9,12 @@ notes.txt
 visit_log.txt
 003_seed_users.sql
 generate_hashes.py
+.env
+notes.txt
+dist/
+node_modules/
+.env.*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
