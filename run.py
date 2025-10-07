@@ -10,6 +10,8 @@ def main():
     args = parser.parse_args()
 
     # 🧪 Load the correct .env file
+    if args == 'dev':
+
     env_file = f".env.{args.env}"
     load_dotenv(dotenv_path=env_file)
 
