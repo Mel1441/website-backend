@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 import os
 from dotenv import load_dotenv
 
-env_file = ".env.production" if os.getenv("ENV") == "production" else ".env.development"
+env_file = ".env.development" if os.getenv("ENV") == "development" else ".env.production"
 load_dotenv(dotenv_path=env_file)
 
 DB_URL = os.getenv("DATABASE_URL")
