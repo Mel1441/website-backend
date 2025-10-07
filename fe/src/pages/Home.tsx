@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import avatar from '../assets/IMG_3974_v1.jpeg';
 
 export default function HomePage() {
   return (
@@ -7,7 +8,7 @@ export default function HomePage() {
       <div className=" grid grid-cols-4">
  
         <div className="col-span-1"/>
-        <img src="dist/assets/IMG_3974_v1.jpeg" alt="Melissa Cartoon Avatar" className="w-100 h-100 object-contain mt-25 ml-25 col-span-1 shadow-sm"/>
+        <img src={avatar} alt="Melissa Avatar" className="w-100 h-100 object-contain mt-25 ml-25 col-span-1 shadow-sm"/>
 
 
         <div className="col-span-1">
