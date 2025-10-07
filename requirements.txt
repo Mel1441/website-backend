@@ -21,3 +21,4 @@ typing-inspection==0.4.1
 typing_extensions==4.15.0
 uvicorn==0.35.0
 sqlalchemy==2.0.43
+psycopg2-binary
