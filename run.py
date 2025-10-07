@@ -6,11 +6,11 @@ import uvicorn
 def main():
     # 🧠 CLI Argument Parser
     parser = argparse.ArgumentParser(description="Run FastAPI app with environment config")
-    parser.add_argument("--env", choices=["dev", "prod"], default="dev", help="Environment to run in")
+    parser.add_argument("--env", choices=["development", "production"], default="development", help="Environment to run in")
     args = parser.parse_args()
 
     # 🧪 Load the correct .env file
-    if args == 'dev':
+    #if args == 'dev':
 
     env_file = f".env.{args.env}"
     load_dotenv(dotenv_path=env_file)
