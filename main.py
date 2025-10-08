@@ -13,7 +13,6 @@ if settings.DEBUG:
 
 app = FastAPI(debug=settings.DEBUG)
 
-app.mount("/", StaticFiles(directory="fe/dist", html=True), name="static")
 
 
 SECRET_KEY = os.getenv("SECRET_KEY")
